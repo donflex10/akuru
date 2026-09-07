@@ -141,6 +141,8 @@ node index.js
 | :--- | :--- | :--- | :--- |
 | `SESSION` | `string` | `""` | The unique session identifier returned during pairing. Used to retrieve your auth keys. |
 | `PHONE` | `string` | `"254725693306"` | The fallback / primary phone number associated with notifications and messages. |
+| `PREFIX` | `string` | `"%"` | Command prefix. Must be exactly one non-alphanumeric symbol. |
+| `GITHUB_TOKEN` | `string` | `""` | Required if the `wa-sessions` repo is private. A fine-grained PAT with read access to that repo. |
 
 ---
 
