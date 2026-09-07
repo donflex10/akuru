@@ -8,10 +8,11 @@
   "name": "akuru",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main/index.js",
   "type": "module", 
   "devDependencies": {},
   "scripts": {
+    "start": "node main/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
