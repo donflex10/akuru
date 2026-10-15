@@ -200,3 +200,19 @@ ISC License © [engineermarcus](https://github.com/engineermarcus)
 <p align="center">
   <sub>Built with ☕, questionable sleep schedules, and <a href="https://github.com/WhiskeySockets/Baileys">Baileys</a>.</sub>
 </p>
+
+## Status recipients
+
+Autopost and status deletion only read `data/status-recipients.json`. Build it from a contacts export:
+
+1. `node tests/pull-csv.js` saves a contacts file received over WhatsApp as `contacts.csv`.
+2. `node tests/recipients.js` extracts numbers from `contacts.csv` (Kenyan formats normalized to `254...`), keeps only those registered on WhatsApp, and writes `tests/recipients.json`.
+3. `cp tests/recipients.json data/status-recipients.json`
+
+Each script opens its own WhatsApp socket on the same session, so stop the bot before running them.
+
+## Status commands
+
+- Autopost posts a quote on every bot start, then hourly (`autoPostStatus` in `settings.js`).
+- `<prefix>delstatus` sent from the bot's own account revokes every status posted in the last 24h.
+- `node tests/delete-statuses.js` revokes statuses by IDs found in the pm2 log. Stop the bot first.
