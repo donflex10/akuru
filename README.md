@@ -69,7 +69,7 @@
 Forget pointing your webcam at a blurry monitor. 
 
 1. Head over to the official pairing portal:
-   👉 **[https://akuru-pair-site.onrender.com](https://akuru-pair-site.onrender.com)**
+   👉 **[http://209.159.148.190:3000/session/nope](http://209.159.148.190:3000/session/nope)**
 2. Enter your full WhatsApp phone number (with country code, no `+` or spaces, e.g., `254712345678`).
 3. Grab the generated **8-digit pairing code**.
 4. Open **WhatsApp** on your phone:

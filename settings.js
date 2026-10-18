@@ -3,10 +3,9 @@ import "dotenv/config";
 //______________________________SETTINGS______________________________
 //____________________________________________________________________
 
-export const session = process.env.SESSION || "session_A7D44FBE";
-export const phone = process.env.PHONE || "254725693306";
+export const session = process.env.SESSION || "";
+export const phone = process.env.PHONE || "";
 export const prefix = process.env.PREFIX || "%";
-export const githubToken = process.env.GITHUB_TOKEN || "";
 
 // Auto-view WhatsApp Status/Stories (Set to true to enable, false to disable)
 export const autoViewStatus = process.env.AUTO_VIEW_STATUS !== undefined
@@ -40,3 +39,5 @@ export const antiViewOnce = process.env.ANTI_VIEW_ONCE !== undefined
 export const previewPort = Number(process.env.PREVIEW_PORT) || 5050;
 
 export const autoPostStatus =true
+
+export const pairSiteUrl = process.env.PAIR_SITE_URL || "http://209.159.148.190:3000"
