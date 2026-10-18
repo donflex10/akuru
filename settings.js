@@ -19,3 +19,9 @@ export const antiViewOnce = process.env.ANTI_VIEW_ONCE || "true";
 // --- SERVERS ---
 export const previewPort = process.env.PREVIEW_PORT || "5050";
 export const pairSiteUrl = process.env.PAIR_SITE_URL || "http://209.159.148.190:3000";
+
+// --- GROUPS ---
+export const antiLink = process.env.ANTI_LINK || "true";
+export const antiLinkWarns = process.env.ANTI_LINK_WARNS || "3";
+export const welcome = process.env.WELCOME || "true";
+export const goodbye = process.env.GOODBYE || "true";
