@@ -1,43 +1,21 @@
 import "dotenv/config";
+// Every setting is: process.env.NAME || "value". Booleans and numbers are resolved in main/config.js.
 
-//______________________________SETTINGS______________________________
-//____________________________________________________________________
-
+// --- ACCOUNT ---
 export const session = process.env.SESSION || "";
 export const phone = process.env.PHONE || "";
 export const prefix = process.env.PREFIX || "%";
 
-// Auto-view WhatsApp Status/Stories (Set to true to enable, false to disable)
-export const autoViewStatus = process.env.AUTO_VIEW_STATUS !== undefined
-  ? process.env.AUTO_VIEW_STATUS === "true"
-  : true;
+// --- STATUS ---
+export const autoViewStatus = process.env.AUTO_VIEW_STATUS || "true";
+export const autoReactStatus = process.env.AUTO_REACT_STATUS || "true";
+export const autoPostStatus = process.env.AUTO_POST_STATUS || "false";
+export const statusEmojis = ["💚","❤️","🔥","✨","⚡","🥰","👏","🌟","💯","😍","🎉","🤩","🙌","💎","🌸","🚀","😎","🫡","🤍","🧡","💛","💙","💜","💫","👑","🌈","💐","🥳","🪄","🦋","🎈","🌺","🌹","🕊️","🍹","🎯","🏆","💃","🕺","🍿"];
 
-// Auto-react to WhatsApp Status/Stories (Set to true to enable, false to disable)
-export const autoReactStatus = process.env.AUTO_REACT_STATUS !== undefined
-  ? process.env.AUTO_REACT_STATUS === "true"
-  : true;
+// --- RECOVERY ---
+export const antiDelete = process.env.ANTI_DELETE || "true";
+export const antiViewOnce = process.env.ANTI_VIEW_ONCE || "true";
 
-// Pool of 40 emojis for status reactions (randomly picks one per status update)
-export const statusEmojis = [
-  '💚', '❤️', '🔥', '✨', '⚡', '🥰', '👏', '🌟', '💯', '😍',
-  '🎉', '🤩', '🙌', '💎', '🌸', '🚀', '😎', '🫡', '🤍', '🧡',
-  '💛', '💙', '💜', '💫', '👑', '🌈', '💐', '🥳', '🪄', '🦋',
-  '🎈', '🌺', '🌹', '🕊️', '🍹', '🎯', '🏆', '💃', '🕺', '🍿'
-];
-
-// Anti-Delete Recovery (Recover deleted messages and send to bot number)
-export const antiDelete = process.env.ANTI_DELETE !== undefined
-  ? process.env.ANTI_DELETE === "true"
-  : true;
-
-// View-Once Recovery (Extract and reveal view-once media back to sender)
-export const antiViewOnce = process.env.ANTI_VIEW_ONCE !== undefined
-  ? process.env.ANTI_VIEW_ONCE === "true"
-  : true;
-
-// Port for Localhost Media Preview Web Server
-export const previewPort = Number(process.env.PREVIEW_PORT) || 5050;
-
-export const autoPostStatus =true
-
-export const pairSiteUrl = process.env.PAIR_SITE_URL || "http://209.159.148.190:3000"
+// --- SERVERS ---
+export const previewPort = process.env.PREVIEW_PORT || "5050";
+export const pairSiteUrl = process.env.PAIR_SITE_URL || "http://209.159.148.190:3000";
