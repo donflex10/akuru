@@ -3,14 +3,14 @@
     "@octokit/rest": "^22.0.1",
     "@whiskeysockets/baileys": "^7.0.0-rc14",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "yt-search": "^2.13.1"
   },
   "name": "akuru",
   "version": "1.0.0",
   "description": "",
   "main": "main/index.js",
-  "type": "module", 
-  "devDependencies": {},
+  "type": "module",
   "scripts": {
     "start": "node main/index.js",
     "cli": "node main/index.js --cli",

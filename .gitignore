@@ -1,3 +1,5 @@
 node_modules/
 sessions/
 data/
+.bot.pid
+yarn.lock
