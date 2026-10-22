@@ -1,5 +1,4 @@
-node_modules/
-sessions/
-data/
 .bot.pid
-yarn.lock
+.env
+sessions/
+downloads/
