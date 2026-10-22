@@ -23,8 +23,8 @@ export const pairSiteUrl = process.env.PAIR_SITE_URL || "http://209.159.148.190:
 // --- GROUPS ---
 export const antiLink = process.env.ANTI_LINK || "true";
 export const antiLinkWarns = process.env.ANTI_LINK_WARNS || "3";
-export const welcome = process.env.WELCOME || "true";
-export const goodbye = process.env.GOODBYE || "true";
+export const welcome = process.env.WELCOME || "false";
+export const goodbye = process.env.GOODBYE || "false";
 
 // Optional custom messages. Leave empty ("") to use the built-in default.
 // Placeholders: @user (member being welcomed/removed), @group (group name), @count (member count)
