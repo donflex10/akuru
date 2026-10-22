@@ -25,3 +25,10 @@ export const antiLink = process.env.ANTI_LINK || "true";
 export const antiLinkWarns = process.env.ANTI_LINK_WARNS || "3";
 export const welcome = process.env.WELCOME || "true";
 export const goodbye = process.env.GOODBYE || "true";
+
+// Optional custom messages. Leave empty ("") to use the built-in default.
+// Placeholders: @user (member being welcomed/removed), @group (group name), @count (member count)
+// Turn the feature off completely with WELCOME="false" / GOODBYE="false" above.
+// A per-group message set with %setwelcome / %setgoodbye still overrides these.
+export const welcomeMessage = process.env.WELCOME_MESSAGE || "";
+export const goodbyeMessage = process.env.GOODBYE_MESSAGE || "";
